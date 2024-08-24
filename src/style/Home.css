@@ -1,0 +1,327 @@
+:root{
+    --blackColor: #011F26;
+    --linkColor: #5C7373;
+    --linkColorHover: #97aecd;
+  }
+
+
+.home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    background-image: url(../assets/culinaria-italiana.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 90dvh;
+    position: relative;
+}
+
+.blur{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.info{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+}
+
+.pratos{
+    background-color: var(--blackColor);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%; 
+  transition: transform 0.5s ease;
+  
+}
+
+.card {
+  flex: 0 0 33.33%; 
+  height: 300px;
+  width: 33.33%;
+  background-color: white;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(90%);
+}
+
+.card:hover{
+    filter: grayscale(0);
+}
+
+.bullets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.bullet{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.card.active{
+    filter: grayscale(0);
+}
+
+.bullet.active{
+    background-color: #D95252;
+}
+
+.about{
+    background-color: var(--blackColor);
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.about .about-info{
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.about-info h1{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about-info h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.about-info p{
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.about-info a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #D95252;
+    font-weight: 500;
+}
+
+.about-info a:hover{
+    transition: .5s;
+    background-color: #8c2222;
+}
+
+.image{
+    width: 350px;
+    height: 350px;
+    background-image: url(../assets/culinaria-italiana.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.services{
+    background-color: var(--blackColor);
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+    padding-bottom: 100px;
+}
+
+.services h2{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services article{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.services article > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.services article svg{
+    font-size: 3rem;
+}
+
+.menu{
+    background-color: var(--blackColor);
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu h2{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+
+    font-family: serif;
+}
+
+.menu div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 100%;
+    z-index: 2;
+}
+
+.menu div article{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    gap: 10px;
+    width: 24%;
+}
+
+.menu div article ul li{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+   
+}
+
+.menu div article li span{
+    font-family: serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    
+}
+
+.menu div article h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #b22a2a;
+    
+    font-family: serif;
+}
+
+.menu .bg01,
+.menu .bg02{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    z-index: 1;
+    background-color: #D95252;
+    opacity: .5;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.menu .bg01{
+    top: 50%;
+    left: -10%;
+}
+
+.menu .bg02{
+    bottom: 50%;
+    right: -10%;
+}
+
+@media screen and (max-width: 800px) {
+    .card{
+        flex: 0 0 98%;
+    }
+
+    .about{
+        flex-direction: column;
+        width: 100%;
+        height: 100% !important;
+    }
+
+    .about .about-info{
+        width: 98% !important;
+    }
+
+    
+
+    .image{
+        width: 100%;
+        height: 300px;
+    }
+
+
+    
+
+}
