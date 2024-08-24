@@ -106,4 +106,37 @@ footer input[type="submit"]:hover{
     transition: .5s;
 }
 
+@media screen and (max-width: 800px) {
+
+    footer section{
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    footer form{
+        display: block;
+        margin: 0 auto;
+        width: 97%;
+        padding: 20px;
+    }
+
+    footer form input{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer form textarea{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer ul{
+        width: 100%;
+    }
+
+    footer .footer-copyright{
+        padding: 10px;
+    }
+}
 
