@@ -15,9 +15,6 @@ import { CiDeliveryTruck } from "react-icons/ci";
 import { PiHamburger } from "react-icons/pi";
 import { LuPartyPopper } from "react-icons/lu";
 
-import { gsap } from "gsap/gsap-core";
-import { ScrollTrigger } from "gsap/all";
-
 export default function Home() {
   const Pratos = [Prato01, Prato02, Prato03, Prato04, Prato05, Prato06];
   const [actualIndex, setActualIndex] = useState(0);
@@ -53,59 +50,7 @@ export default function Home() {
     return () => clearInterval(intervalId);
   }, [actualIndex, Pratos.length]);
 
-    useEffect(() => {
-      gsap.registerPlugin(ScrollTrigger);
-  
-      gsap.fromTo(".about", 
-        { opacity: 0, x: "-100vw" }, 
-        { opacity: 1, x: "0", 
-          scrollTrigger: {
-            trigger: ".about",
-            start: "top 100%",
-            end: "bottom 80%",
-            scrub: true,
-          }
-        }
-      );
-
-      gsap.fromTo(".pratos", 
-        { opacity: 0, x: "-100vw" }, 
-        { opacity: 1, x: "0", 
-          scrollTrigger: {
-            trigger: ".pratos",
-            start: "top 100%",
-            end: "bottom 80%",
-            scrub: true,
-          }
-        }
-      )
-
-      gsap.fromTo(".menu",
-        { opacity: 0, x: "100vw" },
-        { opacity: 1, x: "0",
-          scrollTrigger: {
-            trigger: ".menu",
-            start: "top 100%",
-            end: "center 80%",
-            scrub: true,
-          }
-        }
-      );
-
-      gsap.fromTo(".services",
-        { opacity: 0, x: "100vw" },
-        { opacity: 1, x: "0",
-          scrollTrigger: {
-            trigger: ".services",
-            start: "top 100%",
-            end: "bottom 80%",
-            scrub: true,
-          }
-        }
-      )
-  
-      
-    }, []);
+    
   
 
   return (
